@@ -107,7 +107,7 @@ function buildAndShowHomeHTML (categories) {
       // variable's name implies it expects.
       // var chosenCategoryShortName = ....
 
-      var chooseCategoryShortName = chooseRandomCategory(categories);
+      var chooseCategoryShortName = chooseRandomCategory(categories).short_name;
 
 
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
@@ -122,7 +122,7 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
-
+      chooseCategoryShortName = "'" + chooseCategoryShortName + "'";
       var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "randomCategoryShortName", chooseCategoryShortName);
 
       // TODO: STEP 4: Insert the produced HTML in STEP 3 into the main page
